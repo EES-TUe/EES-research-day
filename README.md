@@ -12,7 +12,6 @@ All content lives in one YAML file per edition, so you don't need to touch HTML:
 | File | What it holds |
 | --- | --- |
 | `_data/editions/2026.yml` | Date, intro text, registration steps, programme, speakers, presentations, venue |
-| `_data/editions/2025.yml` | The 2025 edition, kept as an archive |
 
 Edit the file on GitHub (pencil icon) and commit. The site updates within a minute or two.
 

@@ -91,18 +91,36 @@ address { font-style: normal; margin-bottom: 1em; }
 .site-nav a:hover, .site-nav a[aria-current] { color: var(--ink); }
 .site-nav a[aria-current] { font-weight: 600; }
 
-.edition-switcher { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; }
-.edition-label { color: var(--muted); }
-.edition-switcher ul {
-  display: flex; list-style: none; margin: 0; padding: 3px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+/* Edition dropdown (native <details>, so it works without JS). */
+.edition-switcher { position: relative; font-size: 0.875rem; }
+.edition-switcher > summary {
+  display: flex; align-items: center; gap: 0.4rem; list-style: none; cursor: pointer; user-select: none;
+  min-height: 2.25rem; padding: 0.35rem 0.75rem 0.35rem 0.9rem;
+  background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; font-weight: 600;
 }
-.edition-switcher a {
-  display: block; padding: 0.15rem 0.75rem; border-radius: 999px;
-  color: var(--muted); text-decoration: none; font-weight: 600; font-variant-numeric: tabular-nums;
+.edition-switcher > summary::-webkit-details-marker { display: none; }
+.edition-switcher > summary:hover, .edition-switcher[open] > summary { border-color: var(--muted); }
+.edition-label { color: var(--muted); font-weight: 500; }
+.edition-current { font-variant-numeric: tabular-nums; }
+.chevron { color: var(--muted); transition: transform 0.15s ease; }
+.edition-switcher[open] .chevron { transform: rotate(180deg); }
+.edition-menu {
+  position: absolute; right: 0; top: calc(100% + 0.4rem); z-index: 60;
+  min-width: 10rem; margin: 0; padding: 0.35rem; list-style: none;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.14);
 }
-.edition-switcher a:hover { color: var(--ink); }
-.edition-switcher a[aria-current] { background: var(--red); color: #fff; }
+.edition-menu a {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.45rem 0.7rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.edition-menu a:hover { background: var(--surface); }
+.edition-menu a[aria-current] { color: var(--link); }
+.edition-tag {
+  padding: 0.05rem 0.45rem; border-radius: 999px; background: var(--badge-bg); color: var(--badge-ink);
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+}
 
 .btn.btn-github {
   gap: 0.5rem; min-height: 2.25rem; padding: 0.35rem 0.9rem; font-size: 0.875rem;
@@ -232,12 +250,12 @@ address { font-style: normal; margin-bottom: 1em; }
 .speaker-aff { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0; }
 .talk-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.75rem; }
 .talk-title.is-placeholder, .placeholder { color: var(--muted); font-style: italic; font-weight: 400; }
-details { border-top: 1px solid var(--line); }
-details:last-child { margin-bottom: -0.35rem; }
-summary { cursor: pointer; padding: 0.6rem 0; font-weight: 600; font-size: 0.95rem; color: var(--muted); }
-summary:hover { color: var(--ink); }
-details[open] summary { color: var(--ink); }
-details p { font-size: 0.95rem; }
+.speaker details { border-top: 1px solid var(--line); }
+.speaker details:last-child { margin-bottom: -0.35rem; }
+.speaker summary { cursor: pointer; padding: 0.6rem 0; font-weight: 600; font-size: 0.95rem; color: var(--muted); }
+.speaker summary:hover { color: var(--ink); }
+.speaker details[open] summary { color: var(--ink); }
+.speaker details p { font-size: 0.95rem; }
 
 /* Pitches */
 .sessions { display: grid; gap: 2rem; margin-top: 1.5rem; }
@@ -302,8 +320,6 @@ details p { font-size: 0.95rem; }
 @media (max-width: 359px) {
   .header-inner { column-gap: 0.4rem; }
   .brand { font-size: 0.9rem; }
-  .edition-switcher ul { padding: 2px; }
-  .edition-switcher a { padding-inline: 0.45rem; }
   .btn.btn-github { width: 2rem; min-height: 2rem; }
   .site-nav { column-gap: 0.85rem; font-size: 0.9rem; }
 }

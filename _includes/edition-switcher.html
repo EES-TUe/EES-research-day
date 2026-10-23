@@ -1,10 +1,24 @@
-{%- comment -%} Lists every file in _data/editions/, newest first. {%- endcomment -%}
+{%- comment -%} Dropdown listing every file in _data/editions/, newest first. {%- endcomment -%}
 {%- assign editions = site.data.editions | sort -%}
-<nav class="edition-switcher" aria-label="Edition">
-  <span class="edition-label">Edition</span>
-  <ul>
+<details class="edition-switcher">
+  <summary aria-label="Edition {{ include.current }}, choose edition">
+    <span class="edition-label">Edition</span>
+    <span class="edition-current">{{ include.current }}</span>
+    <svg class="chevron" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </summary>
+  <ul class="edition-menu">
     {%- for e in editions reversed %}
-    <li><a href="{{ '/' | append: e[0] | append: '/' | relative_url }}"{% if e[0] == include.current %} aria-current="page"{% endif %}>{{ e[0] }}</a></li>
+    <li><a href="{{ '/' | append: e[0] | append: '/' | relative_url }}"{% if e[0] == include.current %} aria-current="page"{% endif %}>{{ e[0] }}{% if e[0] == site.current_edition %} <span class="edition-tag">current</span>{% endif %}</a></li>
     {%- endfor %}
   </ul>
-</nav>
+</details>
+<script>
+  // Close the edition dropdown on Escape or a click outside it.
+  (function () {
+    var menu = document.currentScript.previousElementSibling;
+    document.addEventListener("click", function (e) { if (!menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+    });
+  })();
+</script>

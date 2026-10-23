@@ -3,19 +3,19 @@ year: 2026
 date: 2026-12-16
 start_time: "09:00"
 end_time: "17:00"
-status: upcoming          # upcoming | past — "past" turns the page into an archive and hides registration
+status: upcoming # upcoming | past — "past" turns the page into an archive and hides registration
 
-welcome: Welcome to the second Electrical Energy Systems (EES) Research Day!   # large lead text in the About section
+welcome: Welcome to the second Electrical Energy Systems (EES) Research Day! # large lead text in the About section
 intro: |
-  After a successful first edition in 2025, we are glad to bring the group together again for a day of research talks, guest speakers, alumni stories and group activities. It is a chance to see what our colleagues are working on, reconnect with former EES members and share a relaxed lunch together.
+  After a successful first edition in 2025, we are glad to bring the group together again for a day of research talks, guest speakers, alumni stories and group activities. It is a chance to see what our colleagues are working on, reconnect with former EES members and share a lunch together in a festive atmosphere.
 
 # Registration happens inside the EES Employee environment in Microsoft Teams — there is no external form.
 registration:
   intro: >-
     Registration for the EES Research Day 2026 goes through the **EES Employee** environment in Microsoft Teams.
     There is no separate sign-up form on this website.
-  deadline:               # e.g. 2026-12-04 — leave empty to hide
-  teams_link:             # optional deep link to the Teams channel/post/form — leave empty to hide the button
+  deadline: # e.g. 2026-12-04 — leave empty to hide
+  teams_link: # optional deep link to the Teams channel/post/form — leave empty to hide the button
   steps:
     - Open **Microsoft Teams** and sign in with your TU/e account.
     - Go to the **EES Employee** team.
@@ -31,14 +31,56 @@ venue:
 
 programme_note: Draft programme — details may still change.
 programme:
-  - { start: "09:00", end: "10:30", title: Walk-in & coffee, kind: break, tbc: true }
-  - { start: "10:30", end: "11:00", title: Opening and the group statistics for the last year, who: Guus Pemen, affiliation: TU/e EES }
-  - { start: "11:00", end: "11:45", title: "Phase2Phase, and an alumni perspective", who: Anton Ishchenko, affiliation: Phase2Phase, ref: speaker-ishchenko }
-  - { start: "11:45", end: "12:30", title: Title to be announced, who: Nika Khosravi, affiliation: RWTH Aachen University, ref: speaker-khosravi, tbc: true }
+  - {
+      start: "09:00",
+      end: "10:30",
+      title: Walk-in & coffee,
+      kind: break,
+      tbc: true,
+    }
+  - {
+      start: "10:30",
+      end: "11:00",
+      title: Opening and the group statistics for the last year,
+      who: Guus Pemen,
+      affiliation: TU/e EES,
+    }
+  - {
+      start: "11:00",
+      end: "11:45",
+      title: "Phase2Phase, and an alumni perspective",
+      who: Anton Ishchenko,
+      affiliation: Phase2Phase,
+      ref: speaker-ishchenko,
+    }
+  - {
+      start: "11:45",
+      end: "12:30",
+      title: Title to be announced,
+      who: Nika Khosravi,
+      affiliation: RWTH Aachen University,
+      ref: speaker-khosravi,
+      tbc: true,
+    }
   - { start: "12:30", end: "14:00", title: Lunch, kind: break }
-  - { start: "14:00", end: "15:30", title: EES researcher presentations, note: "5 talks × (15 + 3 min Q&A)", who: TU/e EES, kind: pitches, ref: session-1 }
+  - {
+      start: "14:00",
+      end: "15:30",
+      title: EES researcher presentations,
+      note: "5 talks × (15 + 3 min Q&A)",
+      who: TU/e EES,
+      kind: pitches,
+      ref: session-1,
+    }
   - { start: "15:30", end: "15:50", title: Break, kind: break }
-  - { start: "15:50", end: "17:00", title: Group activities, note: Alumni and trivia quiz (TBC), who: Anna Shuvarina, kind: social }
+  - {
+      start: "15:50",
+      end: "17:00",
+      title: Group activities,
+      note: Alumni and trivia quiz (TBC),
+      who: Anna Shuvarina,
+      kind: social,
+    }
 
 speakers_heading: Guest speakers
 speakers:

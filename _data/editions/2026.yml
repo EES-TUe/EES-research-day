@@ -39,7 +39,7 @@ programme:
   - { start: "12:30", end: "14:00", title: Lunch, kind: break }
   - { start: "14:00", end: "15:30", title: EES researcher presentations, note: "5 talks × (15 + 3 min Q&A)", who: TU/e EES, kind: pitches, ref: session-1 }
   - { start: "15:30", end: "15:50", title: Break, kind: break }
-  - { start: "15:50", end: "17:00", title: Group activities, note: Alumni and trivia quiz (TBC), who: Anna Suvarina, kind: social }
+  - { start: "15:50", end: "17:00", title: Group activities, note: Alumni and trivia quiz (TBC), who: Anna Shuvarina, kind: social }
 
 speakers_heading: Guest speakers
 speakers:

@@ -5,9 +5,8 @@ start_time: "09:00"
 end_time: "17:00"
 status: upcoming          # upcoming | past — "past" turns the page into an archive and hides registration
 
+welcome: Welcome to the second Electrical Energy Systems (EES) Research Day!   # large lead text in the About section
 intro: |
-  Welcome to the second Electrical Energy Systems (EES) Research Day!
-
   After a successful first edition in 2025, we are glad to bring the group together again for a day of research talks, guest speakers, alumni stories and group activities. It is a chance to see what our colleagues are working on, reconnect with former EES members and share a relaxed lunch together.
 
 # Registration happens inside the EES Employee environment in Microsoft Teams — there is no external form.

@@ -9,9 +9,12 @@ layout: default
 
 {%- if ed.intro %}
 <section id="about" class="section">
-  <div class="wrap prose">
+  <div class="wrap">
     <h2>About</h2>
-    {{ ed.intro | markdownify }}
+    <div class="about{% if ed.welcome %} about-split{% endif %}">
+      {%- if ed.welcome %}<p class="about-lead">{{ ed.welcome }}</p>{% endif %}
+      <div class="about-body">{{ ed.intro | markdownify }}</div>
+    </div>
   </div>
 </section>
 {%- endif %}

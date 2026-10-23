@@ -209,6 +209,15 @@ address { font-style: normal; margin-bottom: 1em; }
 .section-alt { background: var(--surface); }
 .lede { color: var(--muted); margin-top: -0.25rem; }
 .prose p { max-width: 65ch; }
+.about { display: grid; gap: 1rem 3.5rem; }
+.about-lead {
+  margin: 0; color: var(--red); font-weight: 700; letter-spacing: -0.01em; text-wrap: balance;
+  font-size: clamp(1.35rem, 1.05rem + 1.3vw, 2rem); line-height: 1.25;
+}
+@media (prefers-color-scheme: dark) { .about-lead { color: var(--link); } }
+.about-body { font-size: 1.125rem; }
+.about-body p:last-child { margin-bottom: 0; }
+@media (min-width: 820px) { .about-split { grid-template-columns: 2fr 3fr; } }
 .split { display: grid; gap: 2rem; align-items: start; }
 @media (min-width: 820px) { .split { grid-template-columns: 1fr 1fr; gap: 3.5rem; } }
 

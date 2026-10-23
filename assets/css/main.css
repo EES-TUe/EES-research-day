@@ -285,12 +285,24 @@ address { font-style: normal; margin-bottom: 1em; }
 .organiser-group li { padding: 0.15rem 0; }
 
 /* Venue */
-.venue-photo { border-radius: var(--radius); width: 100%; max-height: 32rem; object-fit: cover; }
-.venue-map {
-  margin-top: 2rem; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
-  background: var(--surface); aspect-ratio: 16 / 7; min-height: 18rem;
+.venue-head {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.75rem 1.5rem; margin-bottom: 0.75rem;
 }
+.venue-head h2 { margin: 0; }
+.venue-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
+.venue-intro { margin: 0; }
+.venue-address { white-space: nowrap; }
+/* Map and photo share one row height, so their top and bottom edges line up. */
+.venue-media { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+.venue-map, .venue-photo { width: 100%; height: 18rem; border-radius: var(--radius); }
+.venue-map { overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
 .venue-map iframe { display: block; width: 100%; height: 100%; border: 0; }
+.venue-photo { object-fit: cover; object-position: center bottom; }
+@media (min-width: 720px) {
+  .venue-media { grid-template-columns: 1fr 1fr; }
+  .venue-map, .venue-photo { height: 28rem; }
+}
 
 /* Register page */
 .page-head { padding-block: clamp(2.5rem, 6vw, 4rem) 0; }

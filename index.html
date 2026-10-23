@@ -1,3 +1,17 @@
 ---
-layout: edition
+layout: null
 ---
+{%- capture target %}{{ '/' | append: site.current_edition | append: '/' | relative_url }}{% endcapture -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <link rel="canonical" href="{{ '/' | append: site.current_edition | append: '/' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+  <script>location.replace("{{ target }}" + location.hash);</script>
+</head>
+<body>
+  <p><a href="{{ target }}">Go to the EES Research Day {{ site.current_edition }}</a></p>
+</body>
+</html>

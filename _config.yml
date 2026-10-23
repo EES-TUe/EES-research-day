@@ -2,8 +2,8 @@ title: EES Research Day
 description: >-
   The annual research day of the Electrical Energy Systems (EES) group at Eindhoven University of Technology.
 url: https://ees-tue.github.io
-baseurl: /EES-research-day-2026   # must match the repository name
-repository: EES-TUe/EES-research-day-2026
+baseurl: /EES-research-day   # must match the repository name
+repository: EES-TUe/EES-research-day
 
 # The edition shown at the site root. Add _data/editions/<year>.yml and a <year>/ folder for a new edition.
 current_edition: "2026"

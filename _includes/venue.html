@@ -14,5 +14,13 @@
     <img class="venue-photo" src="{{ ed.venue.photo | relative_url }}" alt="Street view of {{ ed.venue.name }}" width="900" height="1065" loading="lazy">
     {%- endif %}
   </div>
+  {%- if ed.venue.address %}
+  {%- capture map_query %}{% if ed.venue.map_query %}{{ ed.venue.map_query }}{% else %}{{ ed.venue.name }}, {{ ed.venue.address }}{% endif %}{% endcapture %}
+  <div class="wrap">
+    <div class="venue-map">
+      <iframe src="https://maps.google.com/maps?q={{ map_query | url_encode }}&amp;z=16&amp;output=embed" title="Map showing the location of {{ ed.venue.name }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+  {%- endif %}
 </section>
 {%- endif %}

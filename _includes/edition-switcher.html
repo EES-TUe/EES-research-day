@@ -1,0 +1,10 @@
+{%- comment -%} Lists every file in _data/editions/, newest first. {%- endcomment -%}
+{%- assign editions = site.data.editions | sort -%}
+<nav class="edition-switcher" aria-label="Edition">
+  <span class="edition-label">Edition</span>
+  <ul>
+    {%- for e in editions reversed %}
+    <li><a href="{{ '/' | append: e[0] | append: '/' | relative_url }}"{% if e[0] == include.current %} aria-current="page"{% endif %}>{{ e[0] }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>

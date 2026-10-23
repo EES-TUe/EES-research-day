@@ -1,0 +1,40 @@
+{%- if ed.speakers %}
+<section id="speakers" class="section section-alt">
+  <div class="wrap">
+    <h2>{{ ed.speakers_heading | default: 'Speakers' }}</h2>
+    <div class="speaker-grid">
+      {%- for sp in ed.speakers %}
+      <article class="speaker" id="speaker-{{ sp.id }}">
+        <div class="speaker-head">
+          {%- if sp.photo %}
+          <img class="avatar" src="{{ sp.photo | relative_url }}" alt="Portrait of {{ sp.name }}" width="88" height="88" loading="lazy">
+          {%- else %}
+          {%- assign parts = sp.name | split: ' ' %}
+          <span class="avatar avatar-initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+          {%- endif %}
+          <div>
+            <p class="speaker-role">
+              {%- case sp.role -%}
+                {%- when 'keynote' -%}Keynote
+                {%- when 'alumni' -%}Alumni talk
+                {%- else -%}Invited talk
+              {%- endcase -%}
+              {%- if sp.tbc %} <span class="badge">TBC</span>{% endif -%}
+            </p>
+            <h3>{{ sp.name }}</h3>
+            <p class="speaker-aff">{{ sp.affiliation }}</p>
+          </div>
+        </div>
+        <p class="talk-title{% unless sp.title %} is-placeholder{% endunless %}">{{ sp.title | default: 'Talk title to be announced' }}</p>
+        {%- if sp.abstract %}
+        <details><summary>Abstract</summary>{{ sp.abstract | markdownify }}</details>
+        {%- endif %}
+        {%- if sp.bio %}
+        <details><summary>Biography</summary>{{ sp.bio | markdownify }}</details>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

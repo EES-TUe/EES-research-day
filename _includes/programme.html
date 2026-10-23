@@ -1,0 +1,23 @@
+{%- if ed.programme %}
+<section id="programme" class="section">
+  <div class="wrap">
+    <h2>Programme</h2>
+    {%- if ed.programme_note %}<p class="lede">{{ ed.programme_note }}</p>{% endif %}
+    <ol class="timetable">
+      {%- for s in ed.programme %}
+      <li class="slot slot-{{ s.kind | default: 'talk' }}">
+        <span class="slot-time"><time>{{ s.start }}</time>–<time>{{ s.end }}</time></span>
+        <div class="slot-body">
+          <span class="slot-title">
+            {%- if s.ref %}<a href="#{{ s.ref }}">{{ s.title }}</a>{% else %}{{ s.title }}{% endif -%}
+            {%- if s.tbc %} <span class="badge">TBC</span>{% endif -%}
+          </span>
+          {%- if s.note %}<span class="slot-note">{{ s.note }}</span>{% endif %}
+          {%- if s.who %}<span class="slot-who">{{ s.who }}{% if s.affiliation %}<span class="slot-aff"> · {{ s.affiliation }}</span>{% endif %}</span>{% endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+{%- endif %}

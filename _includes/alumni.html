@@ -1,0 +1,15 @@
+{%- if ed.alumni %}
+<section id="alumni" class="section section-alt">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>EES alumni</h2>
+      {%- if ed.alumni_intro %}<p>{{ ed.alumni_intro }}</p>{% endif %}
+    </div>
+    <ul class="people-list">
+      {%- for a in ed.alumni %}
+      <li><span class="person-name">{{ a.name }}</span><span class="person-org">{{ a.company }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}

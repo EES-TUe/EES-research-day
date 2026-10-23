@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{%- assign key = page.edition | default: site.current_edition -%}
+{%- assign ed = site.data.editions[key] -%}
+{%- assign r = ed.registration -%}
+{%- capture edition_url %}{{ '/' | append: key | append: '/' | relative_url }}{% endcapture -%}
+
+<section class="page-head">
+  <div class="wrap narrow">
+    <p class="eyebrow"><a href="{{ edition_url }}">← EES Research Day {{ ed.year }}</a></p>
+    <h1>How to register</h1>
+    <p class="page-sub">{{ ed.date | date: '%A %-d %B %Y' }} · {{ ed.start_time }}–{{ ed.end_time }} · {{ ed.venue.name }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow prose">
+    {{ r.intro | default: 'Registration goes through the EES Employee environment in Microsoft Teams.' | markdownify }}
+
+    {%- if r.deadline %}
+    <p class="callout callout-strong">Please register before <strong><time datetime="{{ r.deadline | date: '%Y-%m-%d' }}">{{ r.deadline | date: '%A %-d %B %Y' }}</time></strong>.</p>
+    {%- endif %}
+
+    {%- if r.steps %}
+    <ol class="steps">
+      {%- for st in r.steps %}
+      <li>{{ st | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+
+    <p class="link-row">
+      {%- if r.teams_link %}<a class="btn btn-primary" href="{{ r.teams_link }}">Open in Microsoft Teams</a>{% endif %}
+      <a class="btn{% unless r.teams_link %} btn-primary{% endunless %}" href="{{ edition_url }}event.ics" download>Add to calendar</a>
+    </p>
+
+    {%- if r.notes %}
+    <div class="callout">{{ r.notes | markdownify }}</div>
+    {%- endif %}
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{%- if ed.organisers %}
+<section id="organisers" class="section section-alt">
+  <div class="wrap">
+    <h2>Organisers</h2>
+    <div class="organiser-grid">
+      {%- for g in ed.organisers %}
+      <div class="organiser-group">
+        <h3>{{ g.role }}</h3>
+        <ul>{% for n in g.names %}<li>{{ n }}</li>{% endfor %}</ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

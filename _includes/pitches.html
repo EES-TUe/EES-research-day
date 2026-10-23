@@ -1,0 +1,27 @@
+{%- if ed.pitch_sessions %}
+<section id="pitches" class="section">
+  <div class="wrap">
+    <h2>{{ ed.pitches_heading | default: 'EES research pitches' }}</h2>
+    <div class="sessions">
+      {%- for ps in ed.pitch_sessions %}
+      <div class="session" id="{{ ps.id }}">
+        {%- if ed.pitch_sessions.size > 1 %}
+        <h3>{{ ps.name }}{% if ps.time %} <span class="session-time">{{ ps.time }}</span>{% endif %}</h3>
+        {%- elsif ps.time %}
+        <p class="lede">{{ ps.time }}</p>
+        {%- endif %}
+        {%- if ps.pitches.size > 0 %}
+        <ol class="pitch-list">
+          {%- for p in ps.pitches %}
+          <li><span class="pitch-title">{{ p.title }}</span><span class="pitch-presenter">{{ p.presenter }}</span></li>
+          {%- endfor %}
+        </ol>
+        {%- else %}
+        <p class="placeholder">{{ ps.note | default: 'Presenters to be announced.' }}</p>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

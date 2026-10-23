@@ -1,0 +1,18 @@
+{%- if ed.venue %}
+<section id="venue" class="section">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>Venue</h2>
+      <p>The EES Research Day {{ ed.year }} {% if ed.status == 'past' %}took{% else %}takes{% endif %} place at <strong>{{ ed.venue.name }}</strong>.</p>
+      <address>{{ ed.venue.address }}</address>
+      <p class="link-row">
+        {%- if ed.venue.map_url %}<a class="btn" href="{{ ed.venue.map_url }}">Route &amp; map</a>{% endif %}
+        {%- if ed.venue.url %}<a class="btn btn-ghost" href="{{ ed.venue.url }}">Venue website</a>{% endif %}
+      </p>
+    </div>
+    {%- if ed.venue.photo %}
+    <img class="venue-photo" src="{{ ed.venue.photo | relative_url }}" alt="Street view of {{ ed.venue.name }}" width="900" height="1065" loading="lazy">
+    {%- endif %}
+  </div>
+</section>
+{%- endif %}

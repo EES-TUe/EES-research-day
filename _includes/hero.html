@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="wrap hero-inner">
+    {%- if ed.status == 'past' %}
+    <p class="archive-note">
+      <span class="badge badge-on-red">Archive</span>
+      You're viewing the {{ ed.year }} edition.
+      <a href="{{ '/' | append: site.current_edition | append: '/' | relative_url }}">Go to the {{ site.current_edition }} edition →</a>
+    </p>
+    {%- endif %}
+    <p class="eyebrow">TU/e · Electrical Energy Systems</p>
+    <h1>EES Research Day <span class="hero-year">{{ ed.year }}</span></h1>
+    {%- if ed.tagline %}<p class="tagline">{{ ed.tagline }}</p>{% endif %}
+    <dl class="facts">
+      <div><dt>Date</dt><dd><time datetime="{{ ed.date | date: '%Y-%m-%d' }}">{{ ed.date | date: '%A %-d %B %Y' }}</time></dd></div>
+      <div><dt>Time</dt><dd>{{ ed.start_time }}–{{ ed.end_time }}</dd></div>
+      <div><dt>Venue</dt><dd><a href="#venue">{{ ed.venue.name }}</a></dd></div>
+    </dl>
+    {%- if ed.status == 'upcoming' %}
+    <div class="actions">
+      {%- if ed.registration %}<a class="btn btn-light" href="{{ edition_url }}register/">How to register</a>{% endif %}
+      <a class="btn btn-outline-light" href="{{ edition_url }}event.ics" download>Add to calendar</a>
+    </div>
+    {%- endif %}
+  </div>
+  {% include three-phase.svg %}
+</section>

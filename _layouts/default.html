@@ -1,0 +1,54 @@
+<!doctype html>
+{%- assign key = page.edition | default: site.current_edition -%}
+{%- assign ed = site.data.editions[key] -%}
+{%- capture edition_url %}{{ '/' | append: key | append: '/' | relative_url }}{% endcapture -%}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }} {{ key }}</title>
+  <meta name="description" content="{{ site.description }}">
+  {%- if page.layout == 'edition' %}
+  <link rel="canonical" href="{{ '/' | append: key | append: '/' | absolute_url }}">
+  {%- else %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {%- endif %}
+  <meta property="og:title" content="{{ site.title }} {{ key }}">
+  <meta property="og:description" content="{{ ed.date | date: '%-d %B %Y' }} · {{ ed.venue.name }}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#c81919">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ edition_url }}"><span class="brand-mark">EES</span> Research Day</a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="{{ edition_url }}#programme">Programme</a>
+        {%- if ed.speakers %}<a href="{{ edition_url }}#speakers">Speakers</a>{% endif %}
+        <a href="{{ edition_url }}#venue">Venue</a>
+        {%- if ed.status == 'upcoming' and ed.registration %}<a href="{{ edition_url }}register/"{% if page.layout == 'register' %} aria-current="page"{% endif %}>Register</a>{% endif %}
+      </nav>
+      {% include edition-switcher.html current=key %}
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>
+        <a href="https://www.tue.nl/en/research/research-groups/electrical-energy-systems">Electrical Energy Systems group</a><br>
+        Department of Electrical Engineering · Eindhoven University of Technology
+      </p>
+      <p class="footer-meta">
+        <a href="https://github.com/{{ site.repository }}">Edit this site on GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

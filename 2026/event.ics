@@ -1,0 +1,5 @@
+---
+edition: "2026"
+layout: null
+---
+{% include event.ics %}

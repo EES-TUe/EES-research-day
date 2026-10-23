@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{%- assign key = page.edition | default: site.current_edition -%}
+{%- assign ed = site.data.editions[key] -%}
+{%- capture edition_url %}{{ '/' | append: key | append: '/' | relative_url }}{% endcapture -%}
+
+{% include hero.html %}
+
+{%- if ed.intro %}
+<section id="about" class="section">
+  <div class="wrap prose">
+    <h2>About</h2>
+    {{ ed.intro | markdownify }}
+  </div>
+</section>
+{%- endif %}
+
+{% include programme.html %}
+{% include speakers.html %}
+{% include pitches.html %}
+{% include alumni.html %}
+{% include venue.html %}
+{% include organisers.html %}

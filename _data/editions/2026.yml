@@ -9,17 +9,16 @@ welcome: Welcome to the second Electrical Energy Systems (EES) Research Day! # l
 intro: |
   After a successful first edition in 2025, we are glad to bring the group together again for a day of research talks, guest speakers, alumni stories and group activities. It is a chance to see what our colleagues are working on, reconnect with former EES members and share a lunch together in a festive atmosphere.
 
-# Registration happens inside the EES Employee environment in Microsoft Teams — there is no external form.
+# Registration happens via an Excel sheet in the EES employees team in Microsoft Teams — there is no external form.
 registration:
   intro: >-
-    Registration for the EES Research Day 2026 goes through the **EES Employee** environment in Microsoft Teams.
-    There is no separate sign-up form on this website.
+    Registration for the EES Research Day 2026 goes through an Excel sheet in the **EES employees** team in Microsoft Teams.
   deadline: # e.g. 2026-12-04 — leave empty to hide
-  teams_link: # optional deep link to the Teams channel/post/form — leave empty to hide the button
+  teams_link: "https://tuenl.sharepoint.com/:x:/r/sites/EESemployees/Shared%20Documents/General/26-12-16%20%20EES%20research%20day.xlsx?d=w679ae8a0cace4286ab0b81b31bac3a56&csf=1&web=1&e=TCIx0z" # link to the registration sheet — leave empty to hide the button
   steps:
     - Open **Microsoft Teams** and sign in with your TU/e account.
-    - Go to the **EES Employee** team.
-    - Find the **EES Research Day 2026** registration post and follow the instructions there. _(Details TBC.)_
+    - Go to the **EES employees** team and open the **Shared** files.
+    - Open **26-12-16 EES research day.xlsx** and fill in your details, or use the button below to go straight to the sheet.
   notes:
 
 venue:

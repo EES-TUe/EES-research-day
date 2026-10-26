@@ -16,7 +16,7 @@ layout: default
 
 <section class="section">
   <div class="wrap narrow prose">
-    {{ r.intro | default: 'Registration goes through the EES Employee environment in Microsoft Teams.' | markdownify }}
+    {{ r.intro | default: 'Registration goes through the EES employees team in Microsoft Teams.' | markdownify }}
 
     {%- if r.deadline %}
     <p class="callout callout-strong">Please register before <strong><time datetime="{{ r.deadline | date: '%Y-%m-%d' }}">{{ r.deadline | date: '%A %-d %B %Y' }}</time></strong>.</p>
@@ -31,7 +31,7 @@ layout: default
     {%- endif %}
 
     <p class="link-row">
-      {%- if r.teams_link %}<a class="btn btn-primary" href="{{ r.teams_link }}">Open in Microsoft Teams</a>{% endif %}
+      {%- if r.teams_link %}<a class="btn btn-primary" href="{{ r.teams_link }}">Open the registration sheet</a>{% endif %}
       <a class="btn{% unless r.teams_link %} btn-primary{% endunless %}" href="{{ edition_url }}event.ics" download>Add to calendar</a>
     </p>
 

@@ -23,6 +23,9 @@
             </p>
             <h3>{{ sp.name }}</h3>
             <p class="speaker-aff">{{ sp.affiliation }}</p>
+            {%- if sp.email %}
+            <p class="speaker-email"><a href="mailto:{{ sp.email }}">{{ sp.email }}</a></p>
+            {%- endif %}
           </div>
         </div>
         <p class="talk-title{% unless sp.title %} is-placeholder{% endunless %}">{{ sp.title | default: 'Talk title to be announced' }}</p>

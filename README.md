@@ -21,10 +21,19 @@ The edition switcher in the header picks up new years automatically.
 
 ## Previewing locally
 
-Using podman:
+Using podman, run one of these from the repository folder.
+
+Linux / macOS (bash, zsh):
 
 ```sh
 podman run --rm -it -v "$PWD":/srv:Z -w /srv -p 4000:4000 docker.io/library/ruby:3.3 \
+  sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+```
+
+Windows (PowerShell). Start the podman machine first with `podman machine start` if it isn't running:
+
+```powershell
+podman run --rm -it -v "${PWD}:/srv:Z" -w /srv -p 4000:4000 docker.io/library/ruby:3.3 `
   sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
 ```
 

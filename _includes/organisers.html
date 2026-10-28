@@ -6,7 +6,18 @@
       {%- for g in ed.organisers %}
       <div class="organiser-group">
         <h3>{{ g.role }}</h3>
-        <ul>{% for n in g.names %}<li>{{ n }}</li>{% endfor %}</ul>
+        <ul>
+          {%- for n in g.names %}
+          {%- if n.name %}
+          <li>
+            <span class="person-name">{% if n.url %}<a href="{{ n.url }}">{{ n.name }}</a>{% else %}{{ n.name }}{% endif %}</span>
+            {%- if n.title %}<span class="person-org">{{ n.title }}</span>{% endif %}
+          </li>
+          {%- else %}
+          <li>{{ n }}</li>
+          {%- endif %}
+          {%- endfor %}
+        </ul>
       </div>
       {%- endfor %}
     </div>

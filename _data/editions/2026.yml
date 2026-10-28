@@ -31,16 +31,16 @@ venue:
 programme_note: Draft programme — details may still change.
 programme:
   - {
-      start: "09:00",
+      start: "10:00",
       end: "10:30",
       title: Walk-in & coffee,
       kind: break,
-      tbc: true,
+      tbc: false,
     }
   - {
       start: "10:30",
       end: "11:00",
-      title: Opening and the group statistics for the last year,
+      title: "EES: past, present and the future",
       who: Guus Pemen,
       affiliation: TU/e EES,
     }
@@ -55,11 +55,11 @@ programme:
   - {
       start: "11:45",
       end: "12:30",
-      title: Title to be announced,
+      title: "AI in grid operations projects (AI.Grids, SG: SKILL and FAIR4Communities)",
       who: Nika Khosravi,
       affiliation: RWTH Aachen University,
       ref: speaker-khosravi,
-      tbc: true,
+      tbc: false,
     }
   - { start: "12:30", end: "14:00", title: Lunch, kind: break }
   - {
@@ -88,11 +88,25 @@ speakers:
     affiliation: Phase2Phase
     role: alumni
     title: Phase2Phase, and an alumni perspective
+    photo: /assets/img/speakers/ishchenko.png
+    email: anton.ishchenko@phasetophase.nl
   - id: khosravi
     name: Nika Khosravi
     affiliation: RWTH Aachen University
     role: guest
-    tbc: true
+    title: "AI in grid operations projects (AI.Grids, SG: SKILL and FAIR4Communities)"
+    photo: /assets/img/speakers/khosravi.png
+    email: nika.khosravi@eonerc.rwth-aachen.de
+
+organisers:
+  - role: Organising committee
+    names:
+      - name: Dr. Nikolaos Paterakis
+        title: Associate Professor in Power System Optimization and Electricity Markets, TU/e EES
+        url: https://www.nikospaterakis.com/
+      - name: Dr. Lingkang Jin
+        title: Postdoctoral researcher, TU/e EES
+        url: https://lingkangjin.github.io/
 
 pitches_heading: EES researcher presentations
 pitch_sessions:

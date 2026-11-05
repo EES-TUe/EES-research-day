@@ -17,7 +17,8 @@
               {%- case sp.role -%}
                 {%- when 'keynote' -%}Keynote
                 {%- when 'alumni' -%}Alumni talk
-                {%- else -%}Invited talk
+                {%- when 'guest' -%}Invited talk
+                {%- else -%}{{ sp.role | default: 'Invited talk' }}
               {%- endcase -%}
               {%- if sp.tbc %} <span class="badge">TBC</span>{% endif -%}
             </p>
@@ -25,6 +26,10 @@
             <p class="speaker-aff">{{ sp.affiliation }}</p>
             {%- if sp.email %}
             <p class="speaker-email"><a href="mailto:{{ sp.email }}">{{ sp.email }}</a></p>
+            {%- endif %}
+            {%- if sp.logo %}
+            {%- capture logo_img %}<img class="speaker-logo" src="{{ sp.logo | relative_url }}" alt="{{ sp.affiliation }} logo" loading="lazy">{% endcapture %}
+            {% if sp.logo_url %}<a href="{{ sp.logo_url }}">{{ logo_img }}</a>{% else %}{{ logo_img }}{% endif %}
             {%- endif %}
           </div>
         </div>

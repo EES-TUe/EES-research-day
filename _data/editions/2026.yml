@@ -1,7 +1,7 @@
-# EES Research Day 2026 — draft programme. Anything marked tbc: true shows a "TBC" badge.
+# EES Research Day 2026 — programme. Anything marked tbc: true shows a "TBC" badge.
 year: 2026
 date: 2026-12-16
-start_time: "09:00"
+start_time: "10:00"
 end_time: "17:00"
 status: upcoming # upcoming | past — "past" turns the page into an archive and hides registration
 
@@ -28,7 +28,6 @@ venue:
   map_url: https://www.google.com/maps/search/?api=1&query=Aristo+Meeting+Center+Vestdijk+30+Eindhoven
   photo: /assets/img/aristo.jpg
 
-programme_note: Draft programme — details may still change.
 programme:
   - {
       start: "10:00",
@@ -42,14 +41,15 @@ programme:
       end: "11:00",
       title: "EES: past, present and the future",
       who: Guus Pemen,
-      affiliation: TU/e EES,
+      affiliation: EES group chair,
+      ref: speaker-pemen,
     }
   - {
       start: "11:00",
       end: "11:45",
-      title: "Phase2Phase, and an alumni perspective",
+      title: "Power system computations: from EES to industrial practice",
       who: Anton Ishchenko,
-      affiliation: Phase2Phase,
+      affiliation: Phase to Phase,
       ref: speaker-ishchenko,
     }
   - {
@@ -81,32 +81,65 @@ programme:
       kind: social,
     }
 
-speakers_heading: Guest speakers
+speakers_heading: Speakers
 speakers:
+  - id: pemen
+    name: Guus Pemen
+    affiliation: TU/e EES
+    role: EES group chair
+    title: "EES: past, present and the future"
+    photo: /assets/img/speakers/Guus.jpg
+    abstract: |
+      Guus Pemen opens the day with a look at the EES group as a whole: how it started and grew over the years, where it stands in 2026 in terms of people, research themes, funding, publications and student projects, and its vision and plans for the years ahead.
   - id: ishchenko
     name: Anton Ishchenko
-    affiliation: Phase2Phase
-    role: alumni
-    title: Phase2Phase, and an alumni perspective
+    affiliation: Phase to Phase
+    role: Guest speaker
+    title: "Power system computations: from EES to industrial practice"
     photo: /assets/img/speakers/ishchenko.png
     email: anton.ishchenko@phasetophase.nl
+    logo: /assets/img/logos/phase-to-phase.png
+    logo_url: https://www.phasetophase.nl/en/team/
+    abstract: |
+      What happens to power system theory once it leaves the university? In this talk I combine my own path, from a PhD at EES to R&D at Phase to Phase, with an overview of how power system computations are developed and applied in industry. I will introduce the Vision and Gaia software and discuss selected practical cases from industrial and utility projects, such as arc flash, power quality and harmonic mitigation, and protection settings. Along the way I will highlight where academic knowledge proved essential, where practice demanded something different, and which challenges could be interesting topics for future research.
+    bio: |
+      Anton Ishchenko received an MSc. in Electrical Engineering from the Kuban State Technological University (Krasnodar, Russia) in 2002. In 2003 he joined the Eindhoven University of Technology, Netherlands where he finished his PhD thesis in the field of power system dynamics and stability in 2008. Until September 2009 he worked as a Postdoctoral Researcher involved in the EU FP6 Virtual Synchronous Generator (VSYNC) project at the same university. Since October 2009, he has been working as a Researcher at Phase to Phase B.V. company (Arnhem, Netherlands) developing software for power system computations. His current activities include:
+
+      * definition of R&D vision of the company;
+      * development and programming of models and algorithms for power system computations in company’s software;
+      * management and supervision of collaboration with research institutes and universities.
   - id: khosravi
     name: Nika Khosravi
-    affiliation: RWTH Aachen University
-    role: guest
+    affiliation: Institute for Automation of Complex Power Systems, RWTH Aachen University
+    role: Guest speaker
+    logo: /assets/img/logos/RWTH.png
+    logo_url: https://www.acs.eonerc.rwth-aachen.de/cms/e-on-erc-acs/das-institut/mitarbeiter/advanced-machine-learning-solutions/~brnmxj/khosravi-nika/?allou=1&lidx=1
     title: "AI in grid operations projects (AI.Grids, SG: SKILL and FAIR4Communities)"
     photo: /assets/img/speakers/khosravi.png
     email: nika.khosravi@eonerc.rwth-aachen.de
 
 organisers:
   - role: Organising committee
-    names:
-      - name: Dr. Nikolaos Paterakis
-        title: Associate Professor in Power System Optimization and Electricity Markets, TU/e EES
-        url: https://www.nikospaterakis.com/
+    names:      
       - name: Dr. Lingkang Jin
-        title: Postdoctoral researcher, TU/e EES
+        title: Main organizer, Postdoctoral researcher
         url: https://lingkangjin.github.io/
+      - name: Dr. Nikolaos Paterakis
+        title: Co-organizer, associate Professor
+        url: https://www.nikospaterakis.com/
+      - name: Annemarie van de Moosdijk
+        title: Management and Office Assistant
+      - name: Jolanda Levering
+        title: Management and Office Assistant
+      - name: Xin Li
+        title: Photographer and media support
+        url: https://research.tue.nl/p/en/persons/xin-li
+      - name: Stefan De Lange 
+        title: Support 
+        url: https://research.tue.nl/p/en/persons/stefan-de-lange
+      - name: Anna Shuvarina
+        url: https://research.tue.nl/p/en/persons/anna-shuvarina
+        title:  Group activities planner
 
 pitches_heading: EES researcher presentations
 pitch_sessions:

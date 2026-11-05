@@ -264,6 +264,7 @@ address { font-style: normal; margin-bottom: 1em; }
 @media (prefers-color-scheme: dark) { .speaker-role { color: var(--link); } }
 .speaker-aff { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0 0; }
 .speaker-email { font-size: 0.9rem; margin: 0.15rem 0 0; overflow-wrap: anywhere; }
+.speaker-logo { display: block; width: 11rem; max-width: 100%; height: auto; margin-top: 0.5rem; padding: 0.25rem 0.4rem; background: #fff; border-radius: 4px; }
 .talk-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.75rem; }
 .talk-title.is-placeholder, .placeholder { color: var(--muted); font-style: italic; font-weight: 400; }
 .speaker details { border-top: 1px solid var(--line); }
@@ -297,7 +298,8 @@ address { font-style: normal; margin-bottom: 1em; }
 .person-org { color: var(--muted); font-size: 0.95rem; }
 .organiser-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); margin-top: 1.25rem; }
 .organiser-group h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); border-bottom: 2px solid var(--red); padding-bottom: 0.4rem; }
-.organiser-group ul { list-style: none; margin: 0; padding: 0; }
+.organiser-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 1.5rem; }
+@media (min-width: 720px) { .organiser-group ul { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .organiser-group li { display: flex; flex-direction: column; padding: 0.4rem 0; }
 
 /* Venue */

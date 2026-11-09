@@ -278,18 +278,9 @@ address { font-style: normal; margin-bottom: 1em; }
 .sessions { display: grid; gap: 2rem; margin-top: 1.5rem; }
 @media (min-width: 900px) { .sessions:has(.session + .session) { grid-template-columns: 1fr 1.6fr; } }
 .session-time { font-weight: 500; color: var(--muted); font-size: 0.95rem; margin-left: 0.25rem; }
-.pitch-list { list-style: none; margin: 0; padding: 0; counter-reset: pitch; }
-.pitch-list li {
-  counter-increment: pitch; position: relative;
-  display: flex; flex-direction: column; padding: 0.75rem 0 0.75rem 2.5rem; border-bottom: 1px solid var(--line);
-}
-.pitch-list li::before {
-  content: counter(pitch); position: absolute; left: 0; top: 0.8rem;
-  width: 1.75rem; height: 1.75rem; border-radius: 50%; display: grid; place-items: center;
-  background: var(--badge-bg); color: var(--badge-ink); font-size: 0.8rem; font-weight: 700;
-}
-.pitch-title { font-weight: 600; }
-.pitch-presenter { color: var(--muted); font-size: 0.95rem; }
+.pitch-area { font-size: 0.95rem; margin: 0 0 0.6rem; }
+.keywords { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.85rem; padding: 0; }
+.keywords li { background: var(--badge-bg); color: var(--badge-ink); border-radius: 999px; padding: 0.15rem 0.65rem; font-size: 0.8rem; font-weight: 600; }
 
 /* People lists */
 .people-list { list-style: none; margin: 0; padding: 0; }

@@ -146,5 +146,22 @@ pitch_sessions:
   - id: session-1
     name: EES researcher presentations
     time: "14:00–15:30"
-    note: Five EES researchers will present their work (15 minutes + 3 minutes Q&A each). Presenters to be announced.
-    pitches: []
+    note: Five EES researchers will present their work (15 minutes + 3 minutes Q&A each).
+    slots: 5 # shows "More presenters to be announced" until this many pitches are listed
+    pitches:
+      - name: Shimiao Chen
+        affiliation: TU/e EES
+        position: "Postdoctoral Researcher, working with [Dr. Dongsheng Yang](https://www.tue.nl/en/research/researchers/dongsheng-yang) and [Dr. Yin Sun](https://www.tue.nl/en/research/researchers/yin-sun)" # supports Markdown links
+        area: Grid-forming converters, large-signal stability and fault ride-through, and hardware-in-the-loop validation
+        photo: /assets/img/speakers/Shimiao.png
+        email: s.chen5@tue.nl
+        url: https://research.tue.nl/p/en/persons/shimiao-chen
+        title: "From Simulation to HIL Testing: Setting Up a RTDS-based Hardware-in-the-Loop Test Bench for Grid-Forming Converters"
+        keywords:
+          - Grid-forming converters
+          - RTDS-based controller hardware-in-the-loop
+          - Sequential start-up and smooth paralleling of grid-forming converters
+        abstract: |
+          The main focus will be on how to set up and integrate RTDS, PLECS, and two DSP boards into a hardware-in-the-loop platform. The talk will explain how to configure the converter models and input/output interfaces in RTDS, implement and test the GFM control algorithms in PLECS, and configure the DSP boards to compile, load, and execute the control code. Particular attention will be given to signal mapping and scaling, sampling and PWM configuration, and step-by-step closed-loop commissioning. The sequential start-up and smooth paralleling of two GFM converters supplying a DRU will serve as a practical example to demonstrate the complete workflow.
+        bio: |
+          My current research focuses on the fault ride-through (FRT) capability and large-signal stability analysis of offshore grid-forming (GFM) wind-hydrogen co-located systems. By combining theoretical modeling with Hardware-in-the-Loop (CHIL) testing, I aim to optimize control strategies for power electronic interfaces and enhance the grid resilience of large-scale renewable energy systems.

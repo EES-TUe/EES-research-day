@@ -290,7 +290,7 @@ address { font-style: normal; margin-bottom: 1em; }
 .organiser-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); margin-top: 1.25rem; }
 .organiser-group h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); border-bottom: 2px solid var(--red); padding-bottom: 0.4rem; }
 .organiser-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 1.5rem; }
-@media (min-width: 720px) { .organiser-group ul { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 720px) { .organiser-group:only-child ul { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .organiser-group li { display: flex; flex-direction: column; padding: 0.4rem 0; }
 
 /* Venue */

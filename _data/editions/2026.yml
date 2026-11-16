@@ -55,7 +55,7 @@ programme:
   - {
       start: "11:45",
       end: "12:30",
-      title: "AI in grid operations projects (AI.Grids, SG: SKILL and FAIR4Communities)",
+      title: "When can we trust a learned decision?",
       who: Nika Khosravi,
       affiliation: RWTH Aachen University,
       ref: speaker-khosravi,
@@ -76,7 +76,6 @@ programme:
       start: "15:50",
       end: "17:00",
       title: Group activities,
-      note: Alumni and trivia quiz (TBC),
       who: Anna Shuvarina,
       kind: social,
     }
@@ -114,23 +113,31 @@ speakers:
     role: Guest speaker
     logo: /assets/img/logos/RWTH.png
     logo_url: https://www.acs.eonerc.rwth-aachen.de/cms/e-on-erc-acs/das-institut/mitarbeiter/advanced-machine-learning-solutions/~brnmxj/khosravi-nika/?allou=1&lidx=1
-    title: "AI in grid operations projects (AI.Grids, SG: SKILL and FAIR4Communities)"
+    title: "When can we trust a learned decision?"
     photo: /assets/img/speakers/khosravi.png
     email: nika.khosravi@eonerc.rwth-aachen.de
+    abstract: |
+      Intensive care units and power-system control rooms have more in common than it seems. In both, operators make critical decisions under uncertainty, with large amounts of data and no room for trial and error. AI and reinforcement learning promise support for such decisions, but a model that performs well in evaluation does not necessarily perform well in operation. Starting from experience with AI for mechanical ventilation in the ICU, this talk explores what it takes to trust learned decision support in power-system operation, and which questions remain open. It also touches on the role of benchmarks, shared data and skills, drawing on the projects AI.Grids and SG-SKILL.
+    bio: |
+      Nika Khosravi is a research associate and PhD candidate at the Institute for Automation of Complex Power Systems (ACS), E.ON Energy Research Center, RWTH Aachen University. Her research focuses on reliable AI and reinforcement learning for power-system operation. Before joining ACS, she spent a year at the Chair for Medical Information Technology (MedIT), RWTH Aachen, working on AI-based decision support for mechanical ventilation using ICU data. At ACS, she contributes to the European projects AI.Grids, SG-SKILL and FAIR4COMMUNITIES.
 
 organisers:
-  - role: Organising committee
-    names:      
+  - role: Coordination
+    names:
       - name: Dr. Lingkang Jin
         title: Main organizer, Postdoctoral researcher
         url: https://lingkangjin.github.io/
       - name: Dr. Nikolaos Paterakis
         title: Co-organizer, associate Professor
         url: https://www.nikospaterakis.com/
+  - role: Logistics
+    names:
       - name: Annemarie van de Moosdijk
         title: Management and Office Assistant
       - name: Jolanda Levering
         title: Management and Office Assistant
+  - role: Organization support
+    names:
       - name: Xin Li
         title: Photographer and media support
         url: https://research.tue.nl/p/en/persons/xin-li

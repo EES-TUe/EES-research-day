@@ -38,30 +38,30 @@ programme:
     }
   - {
       start: "10:30",
-      end: "11:00",
+      end: "11:15",
       title: "EES: past, present and the future",
-      who: Guus Pemen,
-      affiliation: EES group chair,
+      who: Guus Pemen & Siep Weiland,
+      affiliation: TU/e EES & Control Systems,
       ref: speaker-pemen,
     }
   - {
-      start: "11:00",
-      end: "11:45",
+      start: "11:15",
+      end: "12:00",
       title: "Power system computations: from EES to industrial practice",
       who: Anton Ishchenko,
       affiliation: Phase to Phase,
       ref: speaker-ishchenko,
     }
   - {
-      start: "11:45",
-      end: "12:30",
+      start: "12:00",
+      end: "12:45",
       title: "When can we trust a learned decision?",
       who: Nika Khosravi,
       affiliation: RWTH Aachen University,
       ref: speaker-khosravi,
       tbc: false,
     }
-  - { start: "12:30", end: "14:00", title: Lunch, kind: break }
+  - { start: "12:45", end: "14:00", title: Lunch, kind: break }
   - {
       start: "14:00",
       end: "15:30",
@@ -89,7 +89,15 @@ speakers:
     title: "EES: past, present and the future"
     photo: /assets/img/speakers/Guus.jpg
     abstract: |
-      Guus Pemen opens the day with a look at the EES group as a whole: how it started and grew over the years, where it stands in 2026 in terms of people, research themes, funding, publications and student projects, and its vision and plans for the years ahead.
+      Guus Pemen opens the day with a look at the EES group as a whole: how it started and grew over the years, and where it stands in 2026 in terms of people, research themes, funding, publications and student projects. Together with Siep Weiland, Guus Pemen then looks ahead at the future of EES.
+  - id: weiland
+    name: Siep Weiland
+    affiliation: TU/e Control Systems
+    role: Opening talk
+    title: "EES: past, present and the future"
+    photo: /assets/img/speakers/Siep.png
+    abstract: |
+      Siep Weiland joins Guus Pemen in the opening talk to discuss the future of EES: where the group is heading and its vision and plans for the years ahead.
   - id: ishchenko
     name: Anton Ishchenko
     affiliation: Phase to Phase

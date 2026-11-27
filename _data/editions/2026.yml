@@ -180,3 +180,18 @@ pitch_sessions:
           The main focus will be on how to set up and integrate RTDS, PLECS, and two DSP boards into a hardware-in-the-loop platform. The talk will explain how to configure the converter models and input/output interfaces in RTDS, implement and test the GFM control algorithms in PLECS, and configure the DSP boards to compile, load, and execute the control code. Particular attention will be given to signal mapping and scaling, sampling and PWM configuration, and step-by-step closed-loop commissioning. The sequential start-up and smooth paralleling of two GFM converters supplying a DRU will serve as a practical example to demonstrate the complete workflow.
         bio: |
           My current research focuses on the fault ride-through (FRT) capability and large-signal stability analysis of offshore grid-forming (GFM) wind-hydrogen co-located systems. By combining theoretical modeling with Hardware-in-the-Loop (CHIL) testing, I aim to optimize control strategies for power electronic interfaces and enhance the grid resilience of large-scale renewable energy systems.
+      - name: Xin Li
+        affiliation: TU/e EES
+        position: PhD researcher
+        area: Flexibility and congestion management
+        photo: /assets/img/speakers/xin.png
+        url: https://research.tue.nl/p/en/persons/xin-li
+        title: "Unlocking Thermal Flexibility: Assessing without Full Measurements"
+        keywords:
+          - Thermal flexibility
+          - Residential thermal modelling
+          - Data synthesis
+        abstract: |
+          I will present our ongoing work on SyCoTherm, which can synthesize residential communities with model-ready parameters from real-world measurements. The work has demonstrated good accuracy in a real-world pilot community and achieved comparable performance to existing tools, while requiring significantly less setup effort.
+        bio: |
+          Xin Li is a PhD researcher in the Electrical Energy Systems group at Eindhoven University of Technology (TU/e). Previously, he worked as a research engineer and energy market consultant. His research focuses on power system flexibility and congestion management, and he has published several journal and conference papers in this field.
